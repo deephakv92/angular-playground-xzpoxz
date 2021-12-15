@@ -1,0 +1,74 @@
+<mat-card class="campaign-card">
+  <!-- <mat-card-header> -->
+  <div mat-card-avatar class="campaign-card-header"></div>
+  <mat-card-title class="card-title"
+    >Campaign 1
+    <span class="card-actions material-icons"> open_in_full </span>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <span class="campaign-range campaign-subtitle-item"
+      >25-11-21 to 25-11-22
+    </span>
+    <span class="vertical-divider"> | </span>
+    <span class="campaign-status campaign-subtitle-item">
+      <span class="material-icons">circle</span> Live
+    </span>
+    <span class="vertical-divider"> | </span>
+    <span class="campaign-subtitle-item"
+      >Advertiser : Default Advertised 1</span
+    >
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <span class="campaign-budget-status campaign-subtitle-item">
+      Budget : $20,000
+      <mat-progress-bar
+        mode="determinate"
+        value="60"
+        matTooltip="Budget spent so far"
+      ></mat-progress-bar>
+    </span>
+  </mat-card-subtitle>
+  <!-- </mat-card-header> -->
+  <mat-card-content>
+    <mat-tab-group>
+      <mat-tab label="Package">
+        <ng-container *ngTemplateOutlet="campaignTab"></ng-container>
+      </mat-tab>
+      <mat-tab label="Placement">
+        <ng-container *ngTemplateOutlet="campaignTab"></ng-container>
+      </mat-tab>
+      <mat-tab label="Ads">
+        <ng-container *ngTemplateOutlet="campaignTab"></ng-container>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #campaignTab>
+  <div class="chart-container">
+    <div class="chart-header">100</div>
+    <div class="card-top-action">
+      <span class="material-icons"> open_in_full </span>
+    </div>
+    <div class="chart-flex-container">
+      <div class="move-prev flex-action cursor-pointer">
+        <span class="material-icons"> arrow_back_ios </span>
+      </div>
+      <div class="chart">Chart goes here</div>
+      <div class="move-next flex-action cursor-pointer">
+        <span class="material-icons"> arrow_forward_ios </span>
+      </div>
+    </div>
+    <div class="package-details">
+      <span class="chart-item">Package 100 </span>
+      <span class="vertical-divider"> | </span>
+      <span class="chart-item campaign-status"
+        ><span class="material-icons">circle</span> Live
+      </span>
+      <span class="vertical-divider"> | </span>
+      <span class="chart-item">Net Spend: $2000 </span>
+      <span class="vertical-divider"> | </span>
+      <span class="chart-item">Impressions: 3000 </span>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,53 @@
+:host {
+  color: #1976d2;
+}
+.campaign-card{
+  border-top: 7px solid green
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.chart-container {
+  padding: 20px;
+}
+.vertical-divider {
+  font-size: 20px;
+  margin: 0px 5px;
+}
+.campaign-status {
+  .material-icons {
+    font-size: 12px;
+    color: green;
+  }
+}
+.card-title {
+  .card-actions {
+    cursor: pointer;
+    float: right;
+  }
+  .material-icons {
+    font-size: 12px;
+  }
+}
+.card-top-action {
+  cursor: pointer;
+  float: right;
+  margin-top: -15px;
+  .material-icons {
+    font-size: 12px;
+  }
+}
+.chart-flex-container {
+  display: flex;
+  padding: 20px;
+  .flex-action {
+    display: flex;
+    align-items: center;
+  }
+  .chart {
+    width: 500px;
+    height: 200px;
+    border: 1px solid;
+  }
+}
